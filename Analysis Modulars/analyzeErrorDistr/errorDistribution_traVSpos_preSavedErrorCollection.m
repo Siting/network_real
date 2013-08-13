@@ -89,7 +89,7 @@ for sample = 1 : (numSamplesStudied+1)
     [LINK, JUNCTION, SOURCE_LINK, SINK_LINK] = preloadAndCompute(linkMap, nodeMap, PARAMETER.T, PARAMETER.startTime, PARAMETER.endTime);
     % pre-load occupancy data
     [occuDataMatrix_source, occuDataMatrix_sink] = preloadOccuData(boundarySourceSensorIDs, boundarySinkSensorIDs);
-    
+    clear all
     if sample <= 1 * numSamplesStudied
         for i = 1 : length(LINK)
             guessed_FUNDAMENTAL.vmax = vmax_mean_prior(i);

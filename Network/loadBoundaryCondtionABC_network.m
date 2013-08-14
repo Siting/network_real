@@ -14,7 +14,7 @@ if sensorDataSource == 2
     for i = 1 : length(SOURCE_LINK)
         source_link = SOURCE_LINK(i);
         load(['.\SensorData_feedIn\' num2str(boundarySourceSensorIDs(i)) '.mat']);
-        
+
         % load data from startTime to endTime
         startCell = ceil((startTime*60)/T + 3);
         endCell = floor((endTime*60)/T + 2);

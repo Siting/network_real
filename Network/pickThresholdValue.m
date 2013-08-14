@@ -10,7 +10,11 @@ errorArray = sort(errorCollectionForStage, 'ascend');
 % take the average of +/-3 numbers around the expectAR value
 % floor: make sure index is an integer
 index = floor(size(errorArray,2) * expectAR);
-criteria = mean(errorArray(index-3:index+3));
+if (index-3)<0 || (index+3) > length(errorArray)
+    criteria = errorArray;
+else
+    criteria = mean(errorArray(index-3:index+3));
+end
 
 % assign to thresholdVector
 thresholdVector(stage,:) = [criteria criteria];

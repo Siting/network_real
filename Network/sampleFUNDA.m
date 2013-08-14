@@ -39,7 +39,7 @@ while(state)
     end
 
     if sampleVmax > 0 && sampleDmax > 0 && sampleDc > 0 &&...
-            sampleDmax > sampleDc && sampleVmax <= 100
+            sampleDmax > sampleDc && sampleVmax <= 170
         FUNDAMENTAL.vmax = sampleVmax;
         FUNDAMENTAL.dmax = sampleDmax;
         FUNDAMENTAL.dc = sampleDc;

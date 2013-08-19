@@ -2,8 +2,8 @@ clear all
 clc
 
 series = 70;
-studyStages = [5];
-studyLinks = [1;3;5;7];
+studyStages = [7];
+studyLinks = [1:7];
 numSampleStudied = 100;
 studyParameters = [1;];
 
@@ -21,10 +21,10 @@ for i = 1 : length(studyParameters)
         end
     end
 end
-keyboard
+
 [r,p] = corrcoef(sampleCollection);
 [i,j] = find(p<0.05);
-
+keyboard
 figure
 plot(sampleCollection(:,1),'r.');
 hold on
